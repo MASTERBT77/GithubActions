@@ -8,7 +8,19 @@
     - git status: show status of the repo, files to add and pending changes 
     - git log: shows logs from the commits 
     - git checkout idcommit: temporarily move to another commit
-    - git checkuou main : return to the main branch with all commits in it 
+    - git checkuout main : return to the main branch with all commits in it 
     - git revert idcommit: revert changes of commit by creating a new commit and adding the changes to undo the targe commit to revert
     - git reset --hard idcommit: revert changes by deleting all commits since idcommit
     - .gitnore : file to specify with files should be ignore when you run git add .
+    - git branch "name" : create a new brach from the current commit
+    - git branch: shows the branches 
+    - git branch -D name: delete the branch
+    - git checkout -b name: create and switch to the new branch
+    - git merge brach: merge brach to main 
+    - git remote add localname urlrepo : add remote repo to your local machine 
+    - git push localname main : push local repo to main 
+    - git remote  set-url https://githubuser@github.com/path : triggers authentication to the remote repo, provide personal access tocken
+    - git push origin brachname: push local to remote repo
+    - git pull : download changes from the remote repo
+    - git remote get-url origin: shows url from local repo
+    
