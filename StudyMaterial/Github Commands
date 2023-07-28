@@ -9,3 +9,6 @@
     - git log: shows logs from the commits 
     - git checkout idcommit: temporarily move to another commit
     - git checkuou main : return to the main branch with all commits in it 
+    - git revert idcommit: revert changes of commit by creating a new commit and adding the changes to undo the targe commit to revert
+    - git reset --hard idcommit: revert changes by deleting all commits since idcommit
+    - .gitnore : file to specify with files should be ignore when you run git add .
