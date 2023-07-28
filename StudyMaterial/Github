@@ -1,0 +1,8 @@
+    # set github credentials 
+    git config --global user.name "your-username"
+    git config --global user.email "your-email"
+    # Init github proyect 
+    - git init 
+    - git add: add files 
+    - git commit -m "comment" : take snapshots from the code 
+    - git status: show status of the repo, files to add and pending changes 
