@@ -6,3 +6,6 @@
     - git add: add files 
     - git commit -m "comment" : take snapshots from the code 
     - git status: show status of the repo, files to add and pending changes 
+    - git log: shows logs from the commits 
+    - git checkout idcommit: temporarily move to another commit
+    - git checkuou main : return to the main branch with all commits in it 
