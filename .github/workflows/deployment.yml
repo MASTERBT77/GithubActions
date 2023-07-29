@@ -1,7 +1,8 @@
 # This is a basic workflow to help you get started with Actions
 
 name: Deploy project
-on: push
+#Event triggers
+on: [push, workflow_dispath]
 jobs:
   test:
     runs-on: ubuntu-latest
