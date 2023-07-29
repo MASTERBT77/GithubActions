@@ -1,5 +1,3 @@
-# This is a basic workflow to help you get started with Actions
-
 name: unit test
 on: push
 jobs:
@@ -9,7 +7,7 @@ jobs:
       - name: Get code
         uses: actions/checkout@v3
       - name: install nodeJs (present at ubuntu)
-        uses: actions/setup-node
+        uses: actions/setup-node@v3
         with:
           node-version: 18
       - name: Install dependencies
