@@ -1,5 +1,5 @@
 name: Issue Workflow
-on: push
+on: issues
 jobs:
   info:
     runs-on: ubuntu-latest
