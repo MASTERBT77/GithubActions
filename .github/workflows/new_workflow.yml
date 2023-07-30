@@ -1,11 +1,9 @@
-
 name: Complex event
 on:
   pull_request:
     types:
       - opened
-  workflow_dispatch:
-      
+  workflow_dispatch:  
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -23,60 +21,3 @@ jobs:
       - name: Deploy project
         run: echo "Deploying..."
 
-# name: Test and build app
-# #Event triggers
-# on: [push, workflow_dispatch]
-# jobs:
-#   lint:
-#     runs-on: ubuntu-latest
-#     steps:
-#     #get code
-#       - name: Get code
-#         uses: actions/checkout@v3
-#     #Install depdendencies
-#       - name: Install dependencies
-#         run: npm ci
-#     #run lint     
-#       - name: Run lint   
-#         run: npm run lint
-#   test:
-#     needs: lint
-#     runs-on: ubuntu-latest
-#     steps:
-#     #get code
-#       - name: Get code
-#         uses: actions/checkout@v3
-#     #Install nodejs
-#       - name: install nodeJs (present at ubuntu)
-#         uses: actions/setup-node@v3
-#         with:
-#           node-version: 18
-#     #Install depdendencies
-#       - name: Install dependencies
-#         run: npm ci
-#     #run test
-#       - name: Runt test
-#         run: npm test    
-#   deploy:
-#     needs: test
-#     runs-on: ubuntu-latest
-#     steps: 
-#       - name: Get code
-#         uses: actions/checkout@v3
-#       - name: install nodeJs (present at ubuntu)
-#         uses: actions/setup-node@v3
-#         with:
-#           node-version: 18
-#       - name: Install dependencies
-#         run: npm ci 
-#       - name: build
-#         run: npm run build
- 
-
-
-    
-
-# Multiline Commands
-# run: |
-#     echo "First output"
-#     echo "Second output"
