@@ -1,4 +1,4 @@
-name: output information
+name: Issue Workflow
 on: [issues]
 jobs:
   info:

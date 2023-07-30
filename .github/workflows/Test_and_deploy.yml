@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Deploy project
+name: Test and build app
 #Event triggers
 on: [push, workflow_dispatch]
 jobs:
