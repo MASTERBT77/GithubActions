@@ -1,7 +1,5 @@
 name: Issue Workflow 2
-on:
-  issues:
-    types: [opened, edited]
+on: push
 jobs:
   info:
     runs-on: ubuntu-latest
