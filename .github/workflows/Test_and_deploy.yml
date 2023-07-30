@@ -1,8 +1,11 @@
-# This is a basic workflow to help you get started with Actions
 
-
-name: Events Demo 1
-on: ...
+name: Complex event
+on:
+  pull_request:
+    types:
+      - opened
+  workflow_dispatch:
+      
 jobs:
   deploy:
     runs-on: ubuntu-latest
