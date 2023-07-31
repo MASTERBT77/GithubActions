@@ -6,11 +6,11 @@ on:
   workflow_dispatch:
   #event filters
   push:
-    branches:
-      - React_app
-      - 'dev-*'
-  paths:
-    - '.github/workflow/*'    
+  #   branches:
+  #     - React_app
+  #     - 'dev-*'
+  # paths:
+  #   - '.github/workflow/*'    
 jobs:
   lint:
     runs-on: ubuntu-latest
