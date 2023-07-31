@@ -67,7 +67,7 @@ jobs:
     steps:
       - name: Get artifacts
         uses: actions/download-artifact@v3
-        wtih:
+        with:
           name: dist-file 
       - name: output files 
         run: ls 
