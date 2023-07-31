@@ -1,9 +1,59 @@
 name: Complex event
-on: push
+on:
+  pull_request:
+    types:
+      - opened
+  workflow_dispatch:
+  #event filters
+  push:
+    branches:
+      - React_app
+      - 'dev-*'
+  paths:
+    - '.github/workflow/*'    
 jobs:
-  info:
+  lint:
     runs-on: ubuntu-latest
     steps:
-      - name: Output Github contex
-        run: echo "${{ toJSON(github.event) }}"
-
+    #get code
+      - name: Get code
+        uses: actions/checkout@v3
+    #Install depdendencies
+      - name: Install dependencies
+        run: npm ci
+    #run lint     
+      - name: Run lint   
+        run: npm run lint
+  test:
+    needs: lint
+    runs-on: ubuntu-latest
+    steps:
+    #get code
+      - name: Get code
+        uses: actions/checkout@v3
+    #Install nodejs
+      - name: install nodeJs (present at ubuntu)
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+    #Install depdendencies
+      - name: Install dependencies
+        run: npm ci
+    #run test
+      - name: Runt test
+        run: npm test    
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Get code
+        uses: actions/checkout@v3
+      - name: install nodeJs (present at ubuntu)
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: npm ci 
+      - name: build
+        run: npm run build
+#to skip workflow execution you can add git commit -m "mesagge [skip ci]"
