@@ -1,4 +1,4 @@
-name: Issue Workflow 2
+name: Complex event
 on: push
 jobs:
   info:
