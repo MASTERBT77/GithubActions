@@ -42,7 +42,7 @@ jobs:
     #run test
       - name: Runt test
         run: npm test    
-  deploy:
+  build:
     needs: test
     runs-on: ubuntu-latest
     steps: 
@@ -56,4 +56,16 @@ jobs:
         run: npm ci 
       - name: build
         run: npm run build
+      - name: artifact upload
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist-file 
+          path: |
+            dist
+            package.json   
+  deploy:
+    needs: build   
+    runs-on: ubuntu-latest
+    steps:
+      - name:   
 #to skip workflow execution you can add git commit -m "mesagge [skip ci]"
