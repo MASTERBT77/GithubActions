@@ -21,9 +21,9 @@ jobs:
         #cache content 
       - name: cache dependencies
         uses: actions/cache@v3
-          with: 
-            path: ~/.npm
-            key: deps-node-modules-${{ hasFiles('**/package-log.json') }}
+        with: 
+          path: ~/.npm
+          key: deps-node-modules-${{ hasFiles('**/package-log.json') }}
     #Install depdendencies
       - name: Install dependencies
         run: npm ci
@@ -44,9 +44,9 @@ jobs:
           node-version: 18
       - name: cache dependencies
         uses: actions/cache@v3
-          with: 
-            path: ~/.npm
-            key: deps-node-modules-${{ hasFiles('**/package-log.json') }}    
+        with: 
+          path: ~/.npm
+          key: deps-node-modules-${{ hasFiles('**/package-log.json') }}    
     #Install depdendencies
       - name: Install dependencies
         run: npm ci
@@ -67,9 +67,9 @@ jobs:
           node-version: 18
       - name: cache dependencies
         uses: actions/cache@v3
-          with: 
-            path: ~/.npm
-            key: deps-node-modules-${{ hasFiles('**/package-log.json') }}    
+        with: 
+          path: ~/.npm
+          key: deps-node-modules-${{ hasFiles('**/package-log.json') }}    
       - name: Install dependencies
         run: npm ci 
       - name: build
